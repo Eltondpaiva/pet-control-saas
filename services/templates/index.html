@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Controle Inteligente de Banhos</title>
+</head>
+<body style="font-family: Arial; padding: 40px;">
+
+<h2>🐶 Controle Inteligente de Banhos</h2>
+
+<form action="/processar" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" required>
+    <button type="submit">Gerar Relatório</button>
+</form>
+
+{% if tabela %}
+    <h3>Resultado:</h3>
+    {{ tabela|safe }}
+    <br><br>
+    <a href="/download">📥 Baixar Excel</a>
+{% endif %}
+
+</body>
+</html>
